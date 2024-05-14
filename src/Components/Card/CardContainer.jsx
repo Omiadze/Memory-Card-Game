@@ -84,9 +84,7 @@ const CardContainer = ({
         />
       ))}
       <div
-        className={`absolute top-0 left-0 w-full h-full ${
-          lose ? "" : "hidden"
-        }`}
+        className={`fixed top-0 left-0 w-full h-full ${lose ? "" : "hidden"}`}
       >
         <div className="flex justify-center items-center w-full h-full bg-gray-800 bg-opacity-50">
           <div className="text-white text-center">
@@ -101,7 +99,7 @@ const CardContainer = ({
         </div>
       </div>
       <div
-        className={`absolute top-0 left-0 w-full h-full ${win ? "" : "hidden"}`}
+        className={`fixed top-0 left-0 w-full h-full ${win ? "" : "hidden"}`}
       >
         <div className="flex justify-center items-center w-full h-full bg-gray-800 bg-opacity-50">
           <div className="text-white text-center">
