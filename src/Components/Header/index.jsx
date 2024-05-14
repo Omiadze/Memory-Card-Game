@@ -1,5 +1,5 @@
-const index = ({ score, bestScore }) => {
-  if (score === 10) {
+const index = ({ score, bestScore, numberOfCards }) => {
+  if (score === numberOfCards) {
     alert("You Win");
   }
   return (

@@ -2,7 +2,13 @@ import { useEffect } from "react";
 import CreateCard from "./CreateCard";
 import { useState } from "react";
 
-const CardContainer = ({ score, setScore, bestScore, setBestScore }) => {
+const CardContainer = ({
+  score,
+  setScore,
+  bestScore,
+  setBestScore,
+  numberOfCards,
+}) => {
   const [data, setData] = useState([]);
   const [clickedCard, setClickedCard] = useState([]);
 
@@ -10,7 +16,7 @@ const CardContainer = ({ score, setScore, bestScore, setBestScore }) => {
     const fetchCards = async () => {
       try {
         const response = await fetch(
-          `https://last-airbender-api.fly.dev/api/v1/characters/random?count=10`
+          `https://last-airbender-api.fly.dev/api/v1/characters/random?count=${numberOfCards}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch cards");
@@ -36,17 +42,20 @@ const CardContainer = ({ score, setScore, bestScore, setBestScore }) => {
 
   const saveClickedCards = (cardId) => {
     if (clickedCard.includes(cardId)) {
-      setScore(0);
-      if (score > bestScore) {
-        setBestScore(score);
-      }
-      setClickedCard([]);
-      alert("game over");
+      gameOver();
     } else {
       setClickedCard((prevClickedCard) => [...prevClickedCard, cardId]);
       setScore(score + 1);
     }
   };
+  function gameOver() {
+    setScore(0);
+    if (score > bestScore) {
+      setBestScore(score);
+    }
+    setClickedCard([]);
+    alert("game over");
+  }
 
   console.log(saveClickedCards);
 
