@@ -1,6 +1,7 @@
-const index = ({ score, bestScore, numberOfCards, setWin }) => {
+const index = ({ score, bestScore, numberOfCards, setWinner, setScore }) => {
   if (score === numberOfCards) {
-    setWin(true);
+    setWinner(true);
+    setScore(0);
   }
   return (
     <div className="flex flex-col gap-4 items-center justify-between p-8 bg-bg-color text-brown-text sm:flex-row  ">

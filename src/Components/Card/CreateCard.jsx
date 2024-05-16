@@ -7,16 +7,12 @@ const CreateCard = ({ card, onClick }) => {
       <div className="relative w-full">
         <img
           src={card?.photoUrl}
-          className="mb-3 h-20 sm:h-32 md:h-64 md:w-64 w-20  sm:w-48 rounded-xl"
+          className="mb-3 h-20 sm:h-32 md:h-64 md:w-64 w-20 sm:w-64 rounded-xl"
           alt=""
         />
       </div>
-      <div className="mb-3 flex items-center justify-between px-1 md:items-start">
-        <div className="mb-2">
-          <p className="text-sm sm:text-md font-bold text-navy-700">
-            {card.name}
-          </p>
-        </div>
+      <div className="mb-3 flex flex-col justify-center items-center px-1 md:flex-row md:items-start">
+        <p className="text-xs sm:text-sm md:text-md text-center">{card.name}</p>
       </div>
     </div>
   );

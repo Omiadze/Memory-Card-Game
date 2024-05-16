@@ -7,15 +7,16 @@ function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [lose, setLose] = useState(false);
-  const [win, setWin] = useState(false);
-  const numberOfCards = 5;
+  const [win, setWinner] = useState(false);
+  const numberOfCards = 10;
   return (
     <>
       <Header
         score={score}
         bestScore={bestScore}
         numberOfCards={numberOfCards}
-        setWin={setWin}
+        setWinner={setWinner}
+        setScore={setScore}
       />
       <Card
         score={score}
@@ -26,6 +27,7 @@ function App() {
         lose={lose}
         setLose={setLose}
         win={win}
+        setWinner={setWinner}
       />
     </>
   );
