@@ -1,6 +1,6 @@
 # Memory Card Game React Project
 
-Welcome to the Memory Card Game React project! This project is a fun and interactive game where players can test their memory skills by matching pairs of cards. Below, you'll find information on how to navigate the project, its components, and how to run it locally or access it online.
+Welcome to the Memory Card Game React project developed as part of The Odin Project curriculum! Below, you'll find information on how to navigate the project, its components, and how to run it locally or access it online.
 
 ## Components
 
@@ -17,5 +17,27 @@ Welcome to the Memory Card Game React project! This project is a fun and interac
    
 4. **Header (Header.jsx)**:
    - Displays the header of the game, including the game title and instructions.
+
+## Development
+
+To set up the project locally, follow these steps:
+
+1. Clone this repository.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install` or `yarn install`.
+4. Start the development server using `npm start` or `yarn start`
+
+## Deployment
+
+The project is live on the internet and can be accessed [here](https://game-memory-card1.netlify.app/). It is deployed using Netlify.
+
+## Technologies Used
+
+- React.js
+- tailwind CSS
+
+## Author
+
+Hi, my name is Teo and I'm a Front-End developer.
 
 
