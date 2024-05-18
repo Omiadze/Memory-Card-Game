@@ -7,7 +7,7 @@ const index = ({ gameUpdate, loseOrWin, resetBtn }) => {
     >
       <div className="flex justify-center items-center w-full h-full bg-gray-800 bg-opacity-50">
         <div className="text-white text-center">
-          <h1>{gameUpdate}</h1>
+          <h2 className="text-md sm:text-lg">{gameUpdate}</h2>
           <button
             onClick={resetBtn}
             className={`mt-4 px-4 py-2 ${
